@@ -1,0 +1,13 @@
+
+GET http://localhost:4005/users
+
+###
+
+POST http://localhost:4005/users
+Content-Type: application/json
+
+{
+    "name": "hemalipatel",
+    "password":"name"
+}
+

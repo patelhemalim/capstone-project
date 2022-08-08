@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <title>Add students</title>
+</head>
+
+<body>
+
+    <ul>
+    <li><a href="#contact">Contact Us</a></li>
+    <li><a href="#directory">Directory</a></li>
+    <li><a href="#events">Events</a></li>
+    <li><a href="#donation">Donation</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a class="active" href="#home">Home</a></li>
+   </ul>
+  
+
+   <h1>CREATIVE &nbsp;&nbsp;STEM &nbsp; ACADEMY</h1>
+
+ 
+
+    <div>
+        <img class="logo"src="https://graphicdesignjunction.com/wp-content/uploads/2018/04/colorful_logo_1.jpg" alt="pic not found">
+    </div>
+    <main>
+        <aside>
+            <form>
+
+                <label>Student name</label>
+                <input type="text" id="name" placeholder="" />
+                <br>
+                <label>Age</label>
+                <input type="number" id="age" placeholder="" />
+                <br>
+                <label>Grade</label>
+                <input type="number" id="grade" placeholder="" />
+                <br>
+                <label>Teacher</label>
+                <input type="text" id="teacher" placeholder="" />
+                <br>
+                <button class="addstudents" id="addstudent">Add student </button>
+               <br>
+               <input id="back" type="button" value="Go back!" onclick="history.back()">
+
+            </form>
+        </aside>
+        <section id="student-list"></section>
+
+        
+       
+    </main>
+    <footer>&copy Hemali Patel, DevMountain </footer>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="student.js"></script>
+
+</body>
+
+</html>

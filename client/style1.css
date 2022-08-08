@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("https://st2.depositphotos.com/4584623/7092/i/600/depositphotos_70923621-stock-photo-artist-brushes-and-paints.jpg");
+    background-color: rgb(253, 250, 250);
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+#header {
+    align-self: auto;
+}
+
+h1 {
+    color: rgb(246, 190, 50);
+    position:absolute;
+    bottom: 1318px;
+    left: 300px;
+    z-index: 1;
+}
+
+p {
+    color: rgb(129, 124, 124);
+    font-size: larger;
+}
+
+p1 {
+    color:transparent;
+    font-size:2vh;
+    font-family:American Typewriter, serif	;
+    left: 900px;
+    top: 690px;
+    position: relative;
+    animation-duration: 20s;
+    animation-name: example2;
+    animation-iteration-count: infinite;
+}@keyframes example2 {
+    0%   {color: green;}
+    25%  {color: blue;}
+    50%  {color: rgb(234, 208, 9);}
+    100% {color:rgb(244, 142, 142);}
+    75% {color:transparent;}
+  }
+
+p2 {
+    color: rgb(103, 103, 200);
+    font-size: xx-large;
+    left: 1050px;
+    top: 530px;
+    position: relative;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    justify-content: space-evenly;
+    left: 1360px;
+    top: 560px;
+    position: relative;
+}
+
+#center {
+    background-color: #dddddd;
+    margin: auto;
+    width: 100%;
+}
+
+#username {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    color: inherit;
+    width: 240px;
+}
+
+#password {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    color: inherit;
+    width: 240px;
+}
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: rgb(243, 224, 103);
+}
+
+.active {
+    background-color: #71e5f0;
+}
+
+
+.img1 {
+    mix-blend-mode: multiply;
+    left: 200px;
+    margin-top: 75px;
+    z-index: 1;
+}
+
+.btn {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Green */
+.success {
+    border-color: #04AA6D;
+    color: green;
+}
+
+.success:hover {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.logo {
+    mix-blend-mode: multiply;
+    left: 100px;
+    bottom:1250px ;
+    position: absolute;
+    width: 170px;
+    height: 150px;
+   
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(228, 175, 175);
+    color: whitesmoke;
+    text-align: right;
+   
+}

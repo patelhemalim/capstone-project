@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style4.css">
+    <title>Edit report card</title>
+</head>
+
+<body>
+
+    <h1>CREATIVE &nbsp;&nbsp;STEM &nbsp; ACADEMY</h1>
+
+    <div>
+        <img class="logo" src="https://graphicdesignjunction.com/wp-content/uploads/2018/04/colorful_logo_1.jpg"
+            alt="pic not found">
+    </div>
+
+    <section>
+        <ul>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#directory">Directory</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#donation">Donation</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a class="active" href="#home">Home</a></li>
+        </ul>
+        <div class="box1">
+            <p id="intro">CREATIVE STEM ACADEMY</p>
+            <P id="intro">Third Grade Report Card</P>
+
+        </div>
+    </section>
+    <div class="student-list">
+        <label for="students">Select student:</label>
+        <select name="students" id="student-list" onchange="getReport()">
+            <option value="student1"> List Of Students</option>
+        </select>
+    </div>
+
+   
+    <main>
+        <div>
+            <form id="reportform">
+                <div>
+                    <table>
+                        <tr>
+                            <td class="checkbox">PLEASE CHECK ALL THAT APPLY: </td>
+                            <th>
+                                <div class="checkbox">
+                                    <input type="radio" id="learner_type" name="learner_type" value="1">
+                                    <label for="radio1">Advanced Learner</label><br>
+                                    <input type="radio" id="learner_type" name="learner_type" value="2">
+                                    <label for="radio2">English Learner</label><br>
+                                    <input type="radio" id="learner_type" name="learner_type" value="3">
+                                    <label for="radio3">Recommended After School</label>
+                                </div>
+                            </th>
+                        </tr>
+                    </table>
+                    <table class="table1">
+                        <tr>
+                            <th>Attendance is iportant </th>
+                            <th>GP1</th>
+                            <th>GP2</th>
+                            <th>GP3</th>
+                            <th>GP4</th>
+                        </tr>
+                        <tr>
+                            <td>Days Present</td>
+                            <td>
+                                <input type="number" id="present_gp1" placeholder="" />
+                            </td>
+                            <td> <input type="number" id="present_gp2" placeholder="" />
+                            </td>
+                            <td> <input type="number" id="present_gp3" placeholder="" />
+                            </td>
+                            <td> <input type="number" id="present_gp4" placeholder="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Days Absent</td>
+                            <td>
+                                <input type="number" id="absent_gp1" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="absent_gp2" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="absent_gp3" placeholder="">
+                            </td>
+                            <td>
+                                <input type="number" id="absent_gp4" placeholder="">
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table class="table2">
+                        <tr>
+                            <th>Subjects </td>
+                            <th>GP1</th>
+                            <th>GP2</th>
+                            <th>GP3</th>
+                            <th>GP4</th>
+                        </tr>
+
+                        <tr>
+                            <td>MATH</td>
+                            <td>
+                                <input type="number" id="m1" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="m2" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="m3" placeholder="">
+                            </td>
+                            <td>
+                                <input type="number" id="m4" placeholder="">
+                            </td>
+                        <tr>
+
+                            <td>READING</td>
+                            <td>
+                                <input type="number" id="r1" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="r2" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="r3" placeholder="">
+                            </td>
+                            <td>
+                                <input type="number" id="r4" placeholder="">
+                            </td>
+                        <tr>
+                            <td>WRITING</td>
+                            <td>
+                                <input type="number" id="w1" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="w2" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="w3" placeholder="">
+                            </td>
+                            <td>
+                                <input type="number" id="w4" placeholder="">
+                            </td>
+                        <tr>
+                            <td>SPIEAKING,VIEWING,LISTENING,MEDIA LIT</td>
+                            <td>
+                                <input type="number" id="svlm1" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="svlm2" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="svlm3" placeholder="">
+                            </td>
+                            <td>
+                                <input type="number" id="svlm4" placeholder="">
+                            </td>
+                        <tr>
+                            <td>LANGUAGE</td>
+                            <td>
+                                <input type="number" id="l1" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="l2" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="l3" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="l4" placeholder="" />
+                            </td>
+                        </tr>
+                        <TD>SCIENCE</TD>
+                        <td>
+                            <input type="number" id="s1" placeholder="" />
+                        </td>
+                        <td>
+                            <input type="number" id="s2" placeholder="" />
+                        </td>
+                        <td>
+                            <input type="number" id="s3" placeholder="" />
+                        </td>
+                        <td>
+                            <input type="number" id="s4" placeholder="" />
+                        </td>
+                        <tr>
+                            <TD>SOCIAL STUDIES</TD>
+                            <td>
+                                <input type="number" id="ss1" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="ss2" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="ss3" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="ss4" placeholder="" />
+                            </td>
+
+                        <tr>
+                            <TD>MUSIC</TD>
+                            <td>
+                                <input type="number" id="mc1" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="mc2" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="mc3" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="mc4" placeholder="" />
+                            </td>
+
+                        <tr>
+                            <TD>VISUAL ART</TD>
+                            <td>
+                                <input type="number" id="art1" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="art2" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="art3" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="art4" placeholder="" />
+                            </td>
+                        <tr>
+                            <TD>PHYSICAL EDUCATION</TD>
+                            <td>
+                                <input type="number" id="p1" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="p2" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="p3" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="p4" placeholder="" />
+                            </td>
+                        <tr>
+                            <TD>LIBRARY</TD>
+                            <td>
+                                <input type="number" id="li1" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="li2" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="li3" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="li4" placeholder="" />
+                            </td>
+
+                        <tr>
+                            <TD>WORK HABITS</TD>
+                            <td>
+                                <input type="number" id="wr1" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="wr2" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="wr3" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="wr4" placeholder="" />
+                            </td>
+                        <tr>
+                            <TD>SOCIAL EMOTION SKILLS</TD>
+                            <td>
+                                <input type="number" id="ses1" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="ses2" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="ses3" placeholder="" />
+                            </td>
+                            <td>
+                                <input type="number" id="ses4" placeholder="" />
+                            </td>
+
+
+                           
+                    </table>
+
+
+                    <div>
+                        <input class="bottom-buttons" type="submit"
+                            value="Save">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class="bottom-buttons" onclick="printReportCard()">Print Report Card</button>
+                    </div>
+
+                    <div>
+                        <aside>
+                            <h3 class="keys">KEYS</h3>
+                            <br>
+                            <P>1. Not making progress toward grade level expectations,requires intensive support<br>2.
+                                Making progress
+                                toward gradelevel expectations with support<br>3. Meeting grade level expectations<br>4.
+                                Exceeding grade
+                                level expectations</P>
+                        </aside> 
+                        <aside>
+                            <h3 class="keys">GENERAL COMMENTS</h3>
+                            <br>
+                            <input type="text" id="comments" placeholder="" />
+                        </aside>
+
+                       </div>
+
+
+                </div>
+            </form>
+        </div>
+
+       
+
+    </main>
+
+
+
+    <footer>&copy Hemali Patel, DevMountain </footer>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="reportcard.js"></script>
+</body>
+
+</html>
