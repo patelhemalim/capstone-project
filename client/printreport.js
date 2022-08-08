@@ -1,4 +1,4 @@
-const baseURL = `http://localhost:4005/api/students`
+//const baseURL = `http://localhost:4005/api/students`
 
 getReport()
 
@@ -6,7 +6,7 @@ getReport()
 function getReport() {
     // const params = { id: studentList.value };
 
-    axios.get(`http://localhost:4005/reportcard/35`)
+    axios.get(`/reportcard/35`)
         .then(res => {
             res.data.forEach(reportCard => {
                 console.log(reportCard)

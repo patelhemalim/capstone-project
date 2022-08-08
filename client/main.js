@@ -29,10 +29,10 @@ function login(e){
         name: username.value,
         password: password.value
     }
-    axios.post('http://localhost:4005/users/login', loggingIn).then(res => {
+    axios.post('/users/login', loggingIn).then(res => {
         console.log(res.data)
         window.localStorage.setItem('user',JSON.stringify(res.data))
-       location.href = 'http://127.0.0.1:4005/client/index2.html'
+       location.href = '/client/index2.html'
     })   
 }
 loginForm.addEventListener('submit', login)

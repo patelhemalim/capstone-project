@@ -1,9 +1,9 @@
-const baseURL = `http://localhost:4005/api/students`
+//const baseURL = `http://localhost:4005/api/students`
 
 const studentList = document.querySelector('#student-list')
 
 function getStudents() {
-    axios.get('http://localhost:4005/students')
+    axios.get('/students')
         .then(res => {
             res.data.forEach(student => {
                 const option = document.createElement('option')
@@ -22,7 +22,7 @@ function getReport() {
 
     document.getElementById('reportform').reset();
 
-    axios.get(`http://localhost:4005/reportcard/${studentList.value}`)
+    axios.get(`/reportcard/${studentList.value}`)
         .then(res => {
             res.data.forEach(reportCard => {
                 console.log(reportCard)
@@ -268,7 +268,7 @@ function submitHandler(e) {
         comments: comments.value
     }
 
-    axios.post('http://localhost:4005/reportcard', bodyObj)
+    axios.post('/reportcard', bodyObj)
         .then(() => {
             present_gp1.value = ''
             present_gp2.value = ''
