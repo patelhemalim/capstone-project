@@ -1,6 +1,3 @@
-const baseURL = `http://localhost:4005/api/students`
-
-
 const form = document.querySelector('form')
 const addStudent = document.getElementById('addstudent')
 const studentList = document.querySelector('#student-list')
@@ -10,7 +7,7 @@ const studentList = document.querySelector('#student-list')
 function getStudents() {
     studentList.innerHTML = ''
 
-    axios.get('http://localhost:4005/students/')
+    axios.get('/students/')
         .then(res => {
             res.data.forEach(elem => {
                 let studentCard = `<div class="student-card">
@@ -25,7 +22,7 @@ function getStudents() {
 }
 
 function deleteStudent(id) {
-    axios.delete(`http://localhost:4005/students/${id}`)
+    axios.delete(`/students/${id}`)
         .then(() => getStudents())
         .catch(err => console.log(err))
 }
@@ -49,7 +46,7 @@ function submitHandler(e) {
         teacher: teacher.value
     }
 
-    axios.post('http://localhost:4005/students', bodyObj)
+    axios.post('/students', bodyObj)
         .then(() => {
             studentName.value = ''
             age.value = ''

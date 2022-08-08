@@ -1,8 +1,10 @@
 const express = require('express');
 const app = express();
+// const path = require('path')
 const bcrypt = require('bcrypt');
 const cors = require("cors");
-const { SERVER_PORT } = process.env
+const { SERVER_PORT } = process.env;
+
 
 const { seed, getStudents, deleteStudent,createStudent, getReport,createOrUpdateReportCard } = require('./controller.js')
 
@@ -26,11 +28,7 @@ const rollbar = new Rollbar({
 
 rollbar.log("Hello world!");
 
-
-
-
-
-app.get('/users', (req, res) => {
+ app.get('/users', (req, res) => {
     res.json(users)
 });
 
@@ -123,7 +121,9 @@ app.get('/reportcard/:id',getReport)
 app.post("/reportcard",createOrUpdateReportCard);
 
 
-app.use(express.static(path.join(__dirname, '../public')))
+app.use(express.static(path.join(__dirname, '../client')))
+
+app.get('/', function(req, res){res.sendFile(path.join(__dirname, '../index1.html'))})
 
 const port = process.env.PORT || 4005
 

@@ -5,8 +5,9 @@
   "main": "server/server.js",
   "scripts": {
     "devStart":"nodemon server/server.js",
-    "test": "jest"
-  },
+    "test": "jest",
+    "start": "node server/server.js"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
