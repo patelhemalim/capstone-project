@@ -4,9 +4,11 @@ getReport()
 
 
 function getReport() {
-    // const params = { id: studentList.value };
-
-    axios.get(`/reportcard/35`)
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const id = urlParams.get('student_id')
+    console.log(id)
+    axios.get(`/reportcard/${id}`)
         .then(res => {
             res.data.forEach(reportCard => {
                 console.log(reportCard)
@@ -89,8 +91,4 @@ function selectElement(id, valueToSelect) {
     let element = document.getElementById(id);
     element.innerHTML = valueToSelect;
     console.log(element)
-}
-
-function print(){
-    window.open(`./index5.html?student_id=${studentList.value}`, '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes')
 }

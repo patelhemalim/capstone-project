@@ -4,7 +4,7 @@
 }
 
 body {
-    background-image: url("https://i.pinimg.com/564x/cd/23/8a/cd238adece0f11d0325e6130fbfb1555.jpg");
+    background-image: url("https://i.pinimg.com/originals/a0/6c/8f/a06c8f0c6eaabb436072e06831b4c601.jpg");
     background-color: rgb(253, 250, 250);
     width: 100%;
     height: auto;
@@ -17,10 +17,11 @@ body {
 
     position: relative;
     left: 600px;
-    top: 400px;
+    top: 380px;
     flex-direction: row;
     display: inline-flex;
     margin: 10px;
+   
 
     color: black;
 }
@@ -28,7 +29,7 @@ body {
 
 
 .keys {
-    color: #c89797;
+    color:  rgb(209,134,109);
     font-size: large;
     text-align: center;
 }
@@ -41,13 +42,14 @@ body {
 }
 
 .table2 tr:hover {
-    background-color: #ddd;
+    background-color:whitesmoke;
 }
 
 
 .table2 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
+
 
 .table2 {
     font-family: Arial, Helvetica, sans-serif;
@@ -56,10 +58,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 240px;
+    margin-top: 200px;
     margin-left: 400px;
 
 }
+
+
+
 
 .table2 th {
     padding-top: 12px;
@@ -73,7 +78,7 @@ body {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    background-color: #f5c1c1;
+    background-color: rgb(233, 152, 126);
     color: white;
 }
 
@@ -82,7 +87,7 @@ body {
     border-collapse: separate;
     width: 25%;
     margin-left: 1215px;
-    top: 180px;
+    top: 120px;
     position: relative;
 }
 
@@ -106,7 +111,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: whitesmoke;
 
 }
 
@@ -116,7 +121,7 @@ li {
 
 li a {
     display: block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -137,7 +142,7 @@ aside {
     border: 15px solid rgb(146, 170, 174);
     padding: 50px;
     margin-left: 1570px;
-    bottom: 530px;
+    bottom: 600px;
     position: relative;
 
 }
@@ -152,13 +157,12 @@ aside {
 
 
 .logo {
-    mix-blend-mode: darken;
-    left: 100px;
-    bottom:1250px ;
-    position: absolute;
-    width: 170px;
-    height: 150px;
-   z-index: 1;
+    mix-blend-mode: multiply;
+    margin-left: 210%;
+    position: relative;
+    width: 105px;
+    height: 55px;
+    
 }
 
 
@@ -172,10 +176,10 @@ h1 {
 
 .box1 {
     background-color: white;
-    border: 5px solid#f5c1c1;
-    width: 600px;
-    height: 160px;
-    top: 430px;
+    border: 5px solid rgb(209,134,109);
+    width: 620px;
+    height: 180px;
+    top: 380px;
     left: 530px;
     position: relative;
 }
@@ -189,18 +193,22 @@ h1 {
 
 .student-list {
     position: relative;
-    top: 200px;
-    left: 1030px;
+    top: 150px;
+    left: 1800px;
     width: 200px;
     font-size: medium;
-   
+    display: inline;
+    color: rgb(37, 89, 106);
+    font-size: x-large;
+
+
 }
 
 
 
 .bottom-buttons {
     position: relative;
-    top: 30px;
+     top: 15px;
     left: 1200px;
     display: inline;
     padding: 10px;
@@ -211,20 +219,60 @@ h1 {
 }
 
 .bottom-buttons:hover {
-    background-color: #f5c1c1;
+    background-color:  rgb(236, 178, 158);
 }
 
 .bottom-buttons:hover {
     transform: scale(1.5);
 }
-
 footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgb(228, 175, 175);
-    color: whitesmoke;
+    background-color:whitesmoke;
+    color: rgb(6, 6, 6);
     text-align: right;
-   
+}
+#learner_type{
+    margin-right: 30px;
+}
+.menu-icon{
+    width: 35px;
+  height: 5px;
+  background-color: black;
+  margin-top: 10px ;
+  margin-left: 15px;
+}
+#nav-bar {
+    text-align: right;
+    background-color: whitesmoke;
+    width: 100%;
+    display: inline-block;
+}
+.navlink {
+    width: auto;
+    margin-right: 7%;
+    display: inline;
+    color: #030303;
+    font-size: 19px;
+    font-weight: 500;
+}
+.new_div{
+    float: left;
+  }
+
+  #error{
+    color: red;
+    position: relative;
+     top: 15px;
+    left: 1330px;
+    display: inline;
+}
+
+#success{
+    color: green;
+    position: relative;
+    left: 1330px;
+    display: inline;
 }

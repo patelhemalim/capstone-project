@@ -102,7 +102,8 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: whitesmoke;
+   
 
 }
 
@@ -112,7 +113,7 @@ li {
 
 li a {
     display: block;
-    color: white;
+    color: rgb(6, 6, 6);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -127,12 +128,6 @@ li a:hover:not(.active) {
 }
 
 
-.img1 {
-    mix-blend-mode: multiply;
-    left: 200px;
-    margin-top: 75px;
-    z-index: 1;
-}
 
 .btn {
     border: 2px solid black;
@@ -145,31 +140,59 @@ li a:hover:not(.active) {
 
 /* Green */
 .success {
-    border-color: #04AA6D;
+    border-color: #08f09b;
     color: green;
 }
 
 .success:hover {
-    background-color: #04AA6D;
+    background-color: #08eb98;
     color: white;
 }
 
 .logo {
     mix-blend-mode: multiply;
-    left: 100px;
-    bottom:1250px ;
-    position: absolute;
-    width: 170px;
-    height: 150px;
-   
+    margin-left:210%;
+    position: relative;
+    width: 105px;
+    height: 55px;
+    
 }
 footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgb(228, 175, 175);
-    color: whitesmoke;
+    background-color:whitesmoke;
+    color: rgb(6, 6, 6);
     text-align: right;
+}
+.menu-icon{
+    width: 35px;
+  height: 5px;
+  background-color: black;
+  margin-top: 10px ;
+  margin-left: 15px;
+}
+#nav-bar {
+    text-align: right;
+    text-align: center;
+    background-color: whitesmoke;
+    width: 100%;
+    display: inline-block;
+}
+.navlink {
+    width: auto;
+    margin-right: 7%;
+    display: inline;
+    color: #030303;
+    font-size: 19px;
+    font-weight: 500;
    
 }
+.new_div{
+    float: left;
+  }
+
+  #error{
+      color: red;
+  }

@@ -11,7 +11,7 @@
 
 <body>
 
-    <h1>CREATIVE &nbsp;&nbsp;STEM &nbsp; ACADEMY</h1>
+    <!-- <h1>CREATIVE &nbsp;&nbsp;STEM &nbsp; ACADEMY</h1>
 
     <div>
         <img class="logo" src="https://graphicdesignjunction.com/wp-content/uploads/2018/04/colorful_logo_1.jpg"
@@ -27,12 +27,48 @@
             <li><a href="#about">About</a></li>
             <li><a class="active" href="#home">Home</a></li>
         </ul>
+
+        
+
         <div class="box1">
             <p id="intro">CREATIVE STEM ACADEMY</p>
             <P id="intro">Third Grade Report Card</P>
 
         </div>
-    </section>
+    </section> -->
+
+    
+    <div class="header">
+
+
+        <nav id="nav-bar">
+            <ul>
+                <div class="new_div">
+                    <img class="logo"
+                        src="https://graphicdesignjunction.com/wp-content/uploads/2018/04/colorful_logo_1.jpg" />
+                </div>
+                <div class="new_div">
+                    <h1>REATIVE STEM ACADEMY</h1>
+                </div>
+                <li><a class="nav-link" href="#contact">Contact Us</a></li>
+                <li><a class="nav-link" href="#directory">Directory</a></li>
+                <li><a class="nav-link" href="#events">Events</a></li>
+                <li><a class="nav-link" href="#donation">Donation</a></li>
+                <li><a class="nav-link" href="#about">About</a></li>
+                <li><a class="nav-link" href="#home">Home</a></li>
+                <div class="menu-icon"></div>
+                <div class="menu-icon"></div>
+                <div class="menu-icon"></div>
+
+            </ul>
+        </nav>
+    </div>
+    <div class="box1">
+        <p id="intro">CREATIVE STEM ACADEMY</p>
+        <P id="intro">Third Grade Report Card</P>
+
+    </div>
+
     <div class="student-list">
         <label for="students">Select student:</label>
         <select name="students" id="student-list" onchange="getReport()">
@@ -40,7 +76,7 @@
         </select>
     </div>
 
-   
+
     <main>
         <div>
             <form id="reportform">
@@ -51,18 +87,20 @@
                             <th>
                                 <div class="checkbox">
                                     <input type="radio" id="learner_type" name="learner_type" value="1">
-                                    <label for="radio1">Advanced Learner</label><br>
+                                    <label for="radio1">Advanced Learner</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input type="radio" id="learner_type" name="learner_type" value="2">
-                                    <label for="radio2">English Learner</label><br>
+                                    <label for="radio2">English Learner</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <input type="radio" id="learner_type" name="learner_type" value="3">
                                     <label for="radio3">Recommended After School</label>
                                 </div>
                             </th>
                         </tr>
                     </table>
+                </div>   
+                <div>                 
                     <table class="table1">
                         <tr>
-                            <th>Attendance is iportant </th>
+                            <th>Attendance is important </th>
                             <th>GP1</th>
                             <th>GP2</th>
                             <th>GP3</th>
@@ -96,7 +134,8 @@
                             </td>
                         </tr>
                     </table>
-
+                </div>
+                <div class="tabletwo">
                     <table class="table2">
                         <tr>
                             <th>Subjects </td>
@@ -150,7 +189,7 @@
                                 <input type="number" id="w4" placeholder="">
                             </td>
                         <tr>
-                            <td>SPIEAKING,VIEWING,LISTENING,MEDIA LIT</td>
+                            <td>SPEAKING,VIEWING,LISTENING,MEDIA LIT</td>
                             <td>
                                 <input type="number" id="svlm1" placeholder="" />
                             </td>
@@ -294,40 +333,47 @@
                             </td>
 
 
-                           
-                    </table>
 
+                    </table>
+                </div>
 
                     <div>
+
+                        <input class="bottom-buttons" type="button" value="Go back!" onclick="history.back()">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <input class="bottom-buttons" type="submit"
                             value="Save">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <button class="bottom-buttons" onclick="printReportCard()">Print Report Card</button>
-                    </div>
 
+                    </div>
+                    <div>
+                        <label id="error"></label>
+                        <label id="success"></label>
+                    </div>
                     <div>
                         <aside>
                             <h3 class="keys">KEYS</h3>
                             <br>
-                            <P>1. Not making progress toward grade level expectations,requires intensive support<br>2.
+                            <P>1. Not making progress toward grade level expectations,requires intensive support<br><br>2.
                                 Making progress
-                                toward gradelevel expectations with support<br>3. Meeting grade level expectations<br>4.
+                                toward grade level expectations with support<br><br>3. Meeting grade level expectations<br><br>4.
                                 Exceeding grade
                                 level expectations</P>
-                        </aside> 
+                        </aside>
                         <aside>
                             <h3 class="keys">GENERAL COMMENTS</h3>
                             <br>
                             <input type="text" id="comments" placeholder="" />
                         </aside>
 
-                       </div>
+                    </div>
 
 
                 </div>
             </form>
         </div>
 
-       
+
 
     </main>
 

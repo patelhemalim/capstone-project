@@ -18,7 +18,6 @@ getStudents()
 const form = document.querySelector('form')
 
 function getReport() {
-    // const params = { id: studentList.value };
 
     document.getElementById('reportform').reset();
 
@@ -184,7 +183,8 @@ function submitHandler(e) {
     })
 
     let comments = document.querySelector('#comments')
-
+    document.getElementById('success').innerHTML=''
+    document.getElementById('error').innerHTML=''
 
     let bodyObj = {
         student_id: studentList.value,
@@ -341,8 +341,11 @@ function submitHandler(e) {
             ses4.value = ''
 
             comments.value = ''
+            document.getElementById('success').innerHTML='<b>Report card saved successfully!!!</b>'
             getReport()
-        })
+        }).catch(function (error) {
+            document.getElementById('error').innerHTML='<b>Please try again.</b>'
+          });
 }
 function selectElement(id, valueToSelect) {
     let element = document.getElementById(id);
@@ -350,5 +353,5 @@ function selectElement(id, valueToSelect) {
 }
 
 function printReportCard(){
-    window.open(`./index5.html?student_id=${studentList.value}`, '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes')
+    window.open(`./index5.html?student_id=${studentList.value}`, 'Report Card','height=' + screen.height + ',width=' + screen.width + ',resizable=yes,scrollbars=yes,toolbar=yes,menubar=yes,location=yes')
 }

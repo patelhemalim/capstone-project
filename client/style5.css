@@ -4,7 +4,7 @@
 }
 
 body {
-    background-image: url("https://i.pinimg.com/564x/cd/23/8a/cd238adece0f11d0325e6130fbfb1555.jpg");
+    background-image: url("https://i.pinimg.com/originals/a0/6c/8f/a06c8f0c6eaabb436072e06831b4c601.jpg");
     background-color: rgb(253, 250, 250);
     width: 100%;
     height: auto;
@@ -27,7 +27,7 @@ body {
 
 
 .keys {
-    color: #c89797;
+    color: rgb(236, 178, 158);
     font-size: large;
     text-align: center;
 }
@@ -42,7 +42,7 @@ body {
 }
 
 .table2 tr:hover {
-    background-color: #ddd;
+    background-color: whitesmoke;
 }
 
 
@@ -79,7 +79,7 @@ body {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    background-color: #f5c1c1;
+    background-color: rgb(236, 178, 158);
     color: white;
 }
 
@@ -119,8 +119,8 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
-    height: 60px;
+    background-color: whitesmoke;
+   
 
 }
 
@@ -130,7 +130,7 @@ li {
 
 li a {
     display: block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -151,7 +151,7 @@ aside {
     border: 15px solid rgb(146, 170, 174);
     padding: 50px;
     margin-left: 1390px;
-    bottom: 550px;
+    bottom: 580px;
     position: relative;
 
 }
@@ -164,15 +164,13 @@ aside {
     font-size: large;
 }
 
-
 .logo {
     mix-blend-mode: multiply;
-    left: 100px;
-    bottom:1280px ;
-    position: absolute;
-    width: 100px;
-    height: 100px;
-   z-index: 1;
+    margin-left: 210%;
+    position: relative;
+    width: 105px;
+    height: 55px;
+    
 }
 
 
@@ -186,10 +184,10 @@ h1 {
 
 .box1 {
     background-color: white;
-    border: 5px solid#f5c1c1;
+    border: 5px solid rgb(236, 178, 158);
     width: 340px;
     height: 100px;
-    top: 440px;
+    top: 390px;
     left: 800px;
     position: relative;
 }
@@ -198,16 +196,20 @@ h1 {
     color: #325b6c;
     font-size: large;
     text-align: center;
-
     padding-top: 24px;
 }
 
 .student-list {
     position: relative;
     top: 200px;
-    left: 1030px;
-    width: 200px;
+    left: 740px;
     font-size: medium;
+    color: darkcyan;
+    font-size: large;
+    display: inline;
+    margin-left: 20px;
+  font-size: larger;
+    
    
 }
 
@@ -215,8 +217,8 @@ h1 {
 
 .bottom-buttons {
     position: relative;
-    top: 30px;
-    left: 1400px;
+   bottom: 1100px;
+    left: 2300px;
     display: inline;
     padding: 10px;
     background-color: white;
@@ -224,11 +226,13 @@ h1 {
     border: 2px solid #325b6c;
     transition: transform .2s;
     width: 100px;
+    padding: 10px;
+    margin-right: 20px;
     
 }
 
 .bottom-buttons:hover {
-    background-color: #f5c1c1;
+    background-color:rgb(236, 178, 158);
 }
 
 .bottom-buttons:hover {
@@ -240,7 +244,39 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgb(228, 175, 175);
-    color: white;
+    background-color:whitesmoke;
+    color: rgb(6, 6, 6);
     text-align: right;
 }
+.table0{
+    color: darkcyan;
+    font-size: large;
+    display: inline;
+
+}
+.menu-icon{
+    width: 35px;
+  height: 5px;
+  background-color: black;
+  margin-top: 10px ;
+  margin-left: 15px;
+ 
+ 
+}
+#nav-bar {
+    text-align: right;
+    background-color: whitesmoke;
+    width: 100%;
+    display: inline-block;
+}
+.navlink {
+    width: auto;
+    margin-right: 7%;
+    display: inline;
+    color: #030303;
+    font-size: 19px;
+    font-weight: 500;
+}
+.new_div{
+    float: left;
+  }
