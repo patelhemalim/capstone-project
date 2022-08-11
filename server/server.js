@@ -52,6 +52,9 @@ app.get("/client/index3.html", (req, res) => {
 app.get("/client/student.js", (req, res) => {
     res.sendFile(path.join(__dirname, "../client/student.js"));
 });
+app.get("/client/chart.js", (req, res) => {
+    res.sendFile(path.join(__dirname, "../client/chart.js"));
+});
 app.get("/client/reportcard.js", (req, res) => {
     res.sendFile(path.join(__dirname, "../client/reportcard.js"));
 });
@@ -63,6 +66,9 @@ app.get("/client/index4.html", (req, res) => {
 });
 app.get("/client/index5.html", (req, res) => {
     res.sendFile(path.join(__dirname, "../client/index5.html"));
+});
+app.get("/client/chart.html", (req, res) => {
+    res.sendFile(path.join(__dirname, "../client/chart.html"));
 });
 app.get("/client/style3.css", (req, res) => {
     res.sendFile(path.join(__dirname, "../client/style3.css"));

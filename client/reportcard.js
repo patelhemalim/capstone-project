@@ -355,3 +355,7 @@ function selectElement(id, valueToSelect) {
 function printReportCard(){
     window.open(`./index5.html?student_id=${studentList.value}`, 'Report Card','height=' + screen.height + ',width=' + screen.width + ',resizable=yes,scrollbars=yes,toolbar=yes,menubar=yes,location=yes')
 }
+
+function viewGrowthChart(){
+    window.open(`./chart.html?student_id=${studentList.value}`, 'Report Card','height=' + screen.height + ',width=' + screen.width + ',resizable=yes,scrollbars=yes,toolbar=yes,menubar=yes,location=yes')
+}

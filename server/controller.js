@@ -176,22 +176,28 @@ CREATE TABLE learner (
     VALUES(${student_id},${math_gp1},${math_gp2},${math_gp3},${math_gp4},${reading_gp1},${reading_gp2},${reading_gp3},${reading_gp4},${writing_gp1},${writing_gp2},${writing_gp3},${writing_gp4},${speaking_gp1},${speaking_gp2},${speaking_gp3},${speaking_gp4},${language_gp1},${language_gp2},${language_gp3},${language_gp4},${science_gp1},${science_gp2},${science_gp3},${science_gp4},${social_stidies_gp1},${social_stidies_gp2},${social_stidies_gp3},${social_stidies_gp4},${music_gp1},${music_gp2},${music_gp3},${music_gp4},${visual_art_gp1},${visual_art_gp2},${visual_art_gp3},${visual_art_gp4},${physical_education_gp1},${physical_education_gp2},${physical_education_gp3},${physical_education_gp4},${library_gp1},${library_gp2},${library_gp3},${library_gp4},${work_habit_gp1},${work_habit_gp2},${work_habit_gp3},${work_habit_gp4},${social_emotional_skills_gp1},${social_emotional_skills_gp2},${social_emotional_skills_gp3},${social_emotional_skills_gp4})
     ON CONFLICT (student_id) DO UPDATE SET math_gp1=${math_gp1},math_gp2=${math_gp2},math_gp3=${math_gp3},math_gp4=${math_gp4},reading_gp1=${reading_gp1},reading_gp2=${reading_gp2},reading_gp3=${reading_gp3},reading_gp4=${reading_gp4},writing_gp1=${writing_gp1},writing_gp2=${writing_gp2},writing_gp3=${writing_gp3},writing_gp4=${writing_gp4},speaking_gp1=${speaking_gp1},speaking_gp2=${speaking_gp2},speaking_gp3=${speaking_gp3},speaking_gp4=${speaking_gp4},language_gp1=${language_gp1},language_gp2=${language_gp2},language_gp3=${language_gp3},language_gp4=${language_gp4},science_gp1=${science_gp1},science_gp2=${science_gp2},science_gp3=${science_gp3},science_gp4=${science_gp4},social_stidies_gp1=${social_stidies_gp1},social_stidies_gp2=${social_stidies_gp2},social_stidies_gp3=${social_stidies_gp3},social_stidies_gp4=${social_stidies_gp4},music_gp1=${music_gp1},music_gp2=${music_gp2},music_gp3=${music_gp3},music_gp4=${music_gp4},visual_art_gp1=${visual_art_gp1},visual_art_gp2=${visual_art_gp2},visual_art_gp3=${visual_art_gp3},visual_art_gp4=${visual_art_gp4},physical_education_gp1=${physical_education_gp1},physical_education_gp2=${physical_education_gp2},physical_education_gp3=${physical_education_gp3},physical_education_gp4=${physical_education_gp4},library_gp1=${library_gp1},library_gp2=${library_gp2},library_gp3=${library_gp3},library_gp4=${library_gp4},work_habit_gp1=${work_habit_gp1},work_habit_gp2=${work_habit_gp2},work_habit_gp3=${work_habit_gp3},work_habit_gp4=${work_habit_gp4},social_emotional_skills_gp1=${social_emotional_skills_gp1},social_emotional_skills_gp2=${social_emotional_skills_gp2},social_emotional_skills_gp3=${social_emotional_skills_gp3},social_emotional_skills_gp4=${social_emotional_skills_gp4} WHERE report_card.student_id=${student_id}`).then(dbRes => {
             console.log(dbRes[0])
-        }).catch(err => console.log('error seeding DB', err))
-
-
-
+        }).catch(err => {
+            console.log('error seeding DB', err)
+            res.sendStatus(500).send("error")
+        })
         sequelize.query(`INSERT INTO attendance (student_id,present_gp1,present_gp2,present_gp3,present_gp4,absent_gp1,absent_gp2,absent_gp3,absent_gp4)
     VALUES(${student_id},${present_gp1},${present_gp2},${present_gp3},${present_gp4},${absent_gp1},${absent_gp2},${absent_gp3},${absent_gp4})
     ON CONFLICT (student_id) DO UPDATE SET present_gp1 = ${present_gp1},present_gp2= ${present_gp2},present_gp3= ${present_gp3},present_gp4= ${present_gp4},absent_gp1=${absent_gp1},absent_gp2=${absent_gp2},absent_gp3=${absent_gp3},absent_gp4=${absent_gp4} WHERE attendance.student_id=${student_id}`).then(dbRes => {
             console.log(dbRes[0])
-        }).catch(err => console.log('error seeding DB', err))
+        }).catch(err => {
+            console.log('error seeding DB', err)
+            res.sendStatus(500).send("error")
+        })
 
         sequelize.query(`INSERT INTO learner (student_id,learner_type,comments)
     VALUES(${student_id},${learner_type},'${comments}')
     ON CONFLICT (student_id) DO UPDATE SET learner_type=${learner_type},comments='${comments}' WHERE learner.student_id=${student_id}`).then(dbRes => {
             console.log(dbRes[0])
-        }).catch(err => console.log('error seeding DB', err))
-
+        }).catch(err => {
+            console.log('error seeding DB', err)
+            res.sendStatus(500).send("error")
+        })
+        res.sendStatus(200).send("success")
     },
 
 

@@ -1,20 +1,6 @@
 let user = JSON.parse(window.localStorage.getItem('user'));
 console.log(user);
-//const {SERVER_PORT} = process.env
 
-// function addUser(e) {
-//     e.preventDefault()
-
-//     let newUser = {
-//         user: addInput.value
-//     }
-
-//     axios.put(`http://localhost:4005/api/users/${user.username}`, newUser).then(res => {
-
-//         window.localStorage.setItem('user', JSON.stringify(res.data))
-//     })
-// }
-// addForm.addEventListener('submit', addUser)
 
 
 const loginForm = document.querySelector('form')
