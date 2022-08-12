@@ -19,10 +19,12 @@ body {
 
 h1 {
     color: rgb(246, 190, 50);
-    position:absolute;
-    bottom: 1318px;
-    left: 300px;
+    position:relative;
+    font-size: x-large;
     z-index: 1;
+    padding-left: 198px;
+    padding-top: 15px;
+    text-align: center;
 }
 
 p {

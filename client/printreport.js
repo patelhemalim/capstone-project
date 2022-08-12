@@ -1,4 +1,3 @@
-//const baseURL = `http://localhost:4005/api/students`
 
 getReport()
 
@@ -12,7 +11,7 @@ function getReport() {
         .then(res => {
             res.data.forEach(reportCard => {
                 console.log(reportCard)
-                var checkboxes = document.getElementsByName('learner_type')
+                let checkboxes = document.getElementsByName('learner_type')
                 checkboxes.forEach((item) => {
                     if (item.value == reportCard.learner_type.toString()) item.checked = true
                 })

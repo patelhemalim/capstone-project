@@ -25,7 +25,7 @@ function getReport() {
         .then(res => {
             res.data.forEach(reportCard => {
                 console.log(reportCard)
-                var checkboxes = document.getElementsByName('learner_type')
+            let checkboxes = document.getElementsByName('learner_type')
                 checkboxes.forEach((item) => {
                     if (item.value == reportCard.learner_type.toString()) item.checked = true
                 })
@@ -177,7 +177,7 @@ function submitHandler(e) {
 
     let learner_type = document.getElementsByName('learner_type')
 
-    var checkboxes = document.getElementsByName('learner_type')
+    let checkboxes = document.getElementsByName('learner_type')
     checkboxes.forEach((item) => {
         if (item.checked == true) learner_type = item
     })
@@ -268,7 +268,7 @@ function submitHandler(e) {
         comments: comments.value
     }
 
-    axios.post('/reportcard', bodyObj)
+    axios.put('/reportcard', bodyObj)
         .then(() => {
             present_gp1.value = ''
             present_gp2.value = ''

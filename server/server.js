@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-// const path = require('path')
 const bcrypt = require('bcrypt');
 const cors = require("cors");
 const { SERVER_PORT } = process.env;
@@ -124,7 +123,7 @@ app.post("/students",createStudent);
 app.delete('/students/:id', deleteStudent);
 
 app.get('/reportcard/:id',getReport)
-app.post("/reportcard",createOrUpdateReportCard);
+app.put("/reportcard",createOrUpdateReportCard);
 
 
 app.use(express.static(path.join(__dirname, '../client')))

@@ -162,12 +162,12 @@ CREATE TABLE learner (
         }).catch(err => console.log('error seeding DB', err))
     },
     createOrUpdateReportCard: (req, res) => {
-        var request = req.body
+        let request = req.body
         Object.keys(request).forEach(function(key, index) {
             if (this[key] === '' || this[key] === undefined) this[key] = null;
           }, request);
 
-          var { student_id, math_gp1, math_gp2, math_gp3, math_gp4, reading_gp1, reading_gp2, reading_gp3, reading_gp4, writing_gp1, writing_gp2, writing_gp3, writing_gp4, speaking_gp1, speaking_gp2, speaking_gp3, speaking_gp4, language_gp1, language_gp2, language_gp3, language_gp4, science_gp1, science_gp2, science_gp3, science_gp4, social_stidies_gp1, social_stidies_gp2, social_stidies_gp3, social_stidies_gp4, music_gp1, music_gp2, music_gp3, music_gp4, visual_art_gp1, visual_art_gp2, visual_art_gp3, visual_art_gp4, physical_education_gp1, physical_education_gp2, physical_education_gp3, physical_education_gp4, library_gp1, library_gp2, library_gp3, library_gp4, work_habit_gp1, work_habit_gp2, work_habit_gp3, work_habit_gp4, social_emotional_skills_gp1, social_emotional_skills_gp2, social_emotional_skills_gp3, social_emotional_skills_gp4, present_gp1, present_gp2, present_gp3, present_gp4, absent_gp1, absent_gp2, absent_gp3, absent_gp4, learner_type, comments } = request;
+          let { student_id, math_gp1, math_gp2, math_gp3, math_gp4, reading_gp1, reading_gp2, reading_gp3, reading_gp4, writing_gp1, writing_gp2, writing_gp3, writing_gp4, speaking_gp1, speaking_gp2, speaking_gp3, speaking_gp4, language_gp1, language_gp2, language_gp3, language_gp4, science_gp1, science_gp2, science_gp3, science_gp4, social_stidies_gp1, social_stidies_gp2, social_stidies_gp3, social_stidies_gp4, music_gp1, music_gp2, music_gp3, music_gp4, visual_art_gp1, visual_art_gp2, visual_art_gp3, visual_art_gp4, physical_education_gp1, physical_education_gp2, physical_education_gp3, physical_education_gp4, library_gp1, library_gp2, library_gp3, library_gp4, work_habit_gp1, work_habit_gp2, work_habit_gp3, work_habit_gp4, social_emotional_skills_gp1, social_emotional_skills_gp2, social_emotional_skills_gp3, social_emotional_skills_gp4, present_gp1, present_gp2, present_gp3, present_gp4, absent_gp1, absent_gp2, absent_gp3, absent_gp4, learner_type, comments } = request;
 
         if(learner_type === undefined || learner_type == null ){
             learner_type = null
