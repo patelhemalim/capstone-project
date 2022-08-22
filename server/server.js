@@ -128,7 +128,6 @@ app.put("/reportcard",createOrUpdateReportCard);
 
 app.use(express.static(path.join(__dirname, '../client')))
 
-app.get('/', function(req, res){res.sendFile(path.join(__dirname, '../index1.html'))})
 
 const port = process.env.PORT || 4005
 

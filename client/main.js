@@ -1,5 +1,3 @@
-let user = JSON.parse(window.localStorage.getItem('user'));
-console.log(user);
 
 
 

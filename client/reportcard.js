@@ -1,4 +1,3 @@
-//const baseURL = `http://localhost:4005/api/students`
 
 const studentList = document.querySelector('#student-list')
 
