@@ -24,7 +24,7 @@ function getReport() {
         .then(res => {
             res.data.forEach(reportCard => {
                 console.log(reportCard)
-            let checkboxes = document.getElementsByName('learner_type')
+                let checkboxes = document.getElementsByName('learner_type')
                 checkboxes.forEach((item) => {
                     if (item.value == reportCard.learner_type.toString()) item.checked = true
                 })
@@ -182,12 +182,12 @@ function submitHandler(e) {
     })
 
     let comments = document.querySelector('#comments')
-    document.getElementById('success').innerHTML=''
-    document.getElementById('error').innerHTML=''
+    document.getElementById('success').innerHTML = ''
+    document.getElementById('error').innerHTML = ''
 
     let bodyObj = {
         student_id: studentList.value,
-            
+
         math_gp1: m1.value,
         math_gp2: m2.value,
         math_gp3: m3.value,
@@ -340,21 +340,21 @@ function submitHandler(e) {
             ses4.value = ''
 
             comments.value = ''
-            document.getElementById('success').innerHTML='<b>Report card saved successfully!!!</b>'
+            document.getElementById('success').innerHTML = '<b>Report card saved successfully!!!</b>'
             getReport()
         }).catch(function (error) {
-            document.getElementById('error').innerHTML='<b>Please try again.</b>'
-          });
+            document.getElementById('error').innerHTML = '<b>Please try again.</b>'
+        });
 }
 function selectElement(id, valueToSelect) {
     let element = document.getElementById(id);
     element.value = valueToSelect;
 }
 
-function printReportCard(){
-    window.open(`./index5.html?student_id=${studentList.value}`, 'Report Card','height=' + screen.height + ',width=' + screen.width + ',resizable=yes,scrollbars=yes,toolbar=yes,menubar=yes,location=yes')
+function printReportCard() {
+    window.open(`./index5.html?student_id=${studentList.value}`, 'Report Card', 'height=' + screen.height + ',width=' + screen.width + ',resizable=yes,scrollbars=yes,toolbar=yes,menubar=yes,location=yes')
 }
 
-function viewGrowthChart(){
-    window.open(`./chart.html?student_id=${studentList.value}`, 'Report Card','height=' + screen.height + ',width=' + screen.width + ',resizable=yes,scrollbars=yes,toolbar=yes,menubar=yes,location=yes')
+function viewGrowthChart() {
+    window.open(`./chart.html?student_id=${studentList.value}`, 'Report Card', 'height=' + screen.height + ',width=' + screen.width + ',resizable=yes,scrollbars=yes,toolbar=yes,menubar=yes,location=yes')
 }

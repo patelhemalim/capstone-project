@@ -30,6 +30,7 @@ function getReport() {
                 selectElement('absent_gp2', reportCard.absent_gp2);
                 selectElement('absent_gp3', reportCard.absent_gp3);
                 selectElement('absent_gp4', reportCard.absent_gp4);
+
                 selectElement('m1', reportCard.math_gp1);
                 selectElement('m2', reportCard.math_gp2);
                 selectElement('m3', reportCard.math_gp3);
@@ -82,6 +83,7 @@ function getReport() {
                 selectElement('ses2', reportCard.social_emotional_skills_gp2);
                 selectElement('ses3', reportCard.social_emotional_skills_gp3);
                 selectElement('ses4', reportCard.social_emotional_skills_gp4);
+                
                 selectElement('comments', reportCard.comments);
             })
         })
